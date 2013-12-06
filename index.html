@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>L'Mail-Demo</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="iphone">
+		<span class="home-button switchPageTo" data-animation="21" data-href="home"></span>
+	</div>
+	<div class="pages">
+
+		<!-- <section class="home">
+		<header>
+			<div class="status-bar white"></div>
+		</header>
+		<div class="lmail-icon switchPageTo" data-animation="22" data-href="launch-image">
+			<span class="n">3</span>
+			<span class="label">L'Mail</span>
+		</div>
+	</section>
+	<section class="launch-image switchPageTo" data-animation="21" data-href="index">启动画面</section>
+	 <section class="welcome1 switchPageTo" data-animation="1" data-href="welcome2">
+		教程动画1
+		<ul class="dots">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</section>
+	<section class="welcome2 switchPageTo" data-animation="1" data-href="welcome3">
+		教程动画2
+		<ul class="dots">
+			<li></li>
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</section>
+	<section class="welcome3 switchPageTo" data-animation="1" data-href="welcome4">
+		教程动画3
+		<ul class="dots">
+			<li></li>
+			<li></li>
+			<li class="active"></li>
+			<li></li>
+		</ul>
+	</section>
+	<section class="welcome4 switchPageTo" data-animation="1" data-href="index">
+		教程动画4
+		<ul class="dots">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li class="active"></li>
+		</ul>
+	</section> -->
+	
+	<section class="index">
+		<header>
+			<div class="status-bar black"></div>
+
+		</header>
+		<div class="content-view">
+			<div class="top"> <i class="fa fa-bars"></i>
+				<span class="edit">编辑</span>
+				<div class="dropdown">
+					<a data-toggle="dropdown" href="#">
+						收件箱（ <b>3</b>
+						） <i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li class="active">
+							<a>
+								<i class="fa fa-inbox"></i>
+								收件箱
+							</a>
+						</li>
+						<li>
+							<a>
+								<i class="glyphicon glyphicon-star-empty"></i>
+								星标邮件
+							</a>
+						</li>
+						<li>
+							<a>
+								<span class="glyphicon glyphicon-send"></span>
+								已发送
+							</a>
+						</li>
+						<li>
+							<a>
+								<i class="fa fa-file-o"></i>
+								草稿箱
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="top2"></div>
+			<div class="sidebar">
+				<h5 class="title">账号</h5>
+				<ul class="account">
+					<li>tm@lmail.com</li>
+					<li>t@leafiy.com</li>
+					<li><i class="fa fa-plus-square-o"></i>添加邮箱</li>
+				</ul>
+				<h5 class="title">功能列表</h5>
+				<ul>
+					<li><i class="fa fa-paperclip"></i>全局附件管理<i class="fa fa-angle-right"></i></li>
+					<li class="switchPageTo" data-animation="1" data-href="dropbox-auth"><i class="fa fa-dropbox"></i>绑定Dropbox<i class="fa fa-angle-right"></i></li>
+					<li><i class="icon icon-evernote"></i>已绑定EverNote <i class="switch on"></i></li>
+					<li><i class="fa fa-users"></i>常用联系人<i class="fa fa-angle-right"></i></li>
+				</ul>
+				<h5 class="title">更多设置</h5>
+				<ul>
+					<li><i class="fa fa-suitcase"></i>购买L'Mail增强包<i class="fa fa-angle-right"></i></li>
+					<li class="switchPageTo" data-animation="3" data-href="settings"><i class="fa fa-cogs"></i>更多设置<i class="fa fa-angle-right"></i></li>
+				</ul>
+			</div>
+			<div class="bottom">
+				<ul>
+					<li><i class="glyphicon glyphicon-check"></i>全选</li>
+					<li><i class="glyphicon glyphicon-share"></i>移动</li>
+					<li><i class="fa fa-trash-o"></i>删除</li>
+				</ul>
+				
+			</div>
+			<ul class="mail-list">
+				<li class="unread many">
+					<div class="author"><i class="fa fa-star"></i>T.Vedder(t.vedder@lmail.com)</div>
+					<div class="title">会议安排</div>
+					<div class="content">所有基础理论研究人员下午三点到三号曲率研究中心开会</div>
+					<div class="time">11:32</div>
+					<div class="num">2</div>
+					<i class="checkbox fa fa-square-o"></i>
+					<div class="functions">
+						<i class="fa fa-star-o"></i>
+						<i class="icon icon-evernote"></i>
+						<i class="fa fa-dropbox"></i>
+						<i class="fa fa-trash-o"></i>
+					</div>
+				</li>
+				<li class="unread">
+					<div class="author"><i class="fa fa-star"></i>PDC主席(chief@pdc.un.org)</div>
+					<div class="title">必须马上停止对空间曲率引擎的研究</div>
+					<div class="content">如果再一意孤行，将对你们进行武力征服并以反人类罪审判</div>
+					<div class="time">11:32</div>
+					<div class="num">2</div>
+					<i class="checkbox fa fa-square-o"></i>
+					<div class="functions">
+						<i class="fa fa-star-o"></i>
+						<i class="icon icon-evernote"></i>
+						<i class="fa fa-dropbox"></i>
+						<i class="fa fa-trash-o"></i>
+					</div>
+				</li>
+				<li class="many star">
+					<div class="author">
+						<i class="fa fa-star"></i>
+						程心(xin.c@lmail.com)
+					</div>
+					<div class="title">Mr.Vedder将立刻上任星环公司CEO</div>
+					<div class="content">明天开始，我将不再担任星环公司CEO，职位已移交至Mr.Vedder</div>
+					<div class="time">昨天</div>
+					<div class="num">6</div>
+					<i class="checkbox fa fa-square-o"></i>
+					<div class="functions">
+						<i class="fa fa-star-o"></i>
+						<i class="icon icon-evernote"></i>
+						<i class="fa fa-dropbox"></i>
+						<i class="fa fa-trash-o"></i>
+					</div>
+				</li>
+				<li class="unread slide-example">
+					<div class="author">
+						<i class="fa fa-star"></i>
+						艾AA(aa@lmail.com)
+					</div>
+					<div class="title">星环公司第一季度财报</div>
+					<div class="content">财报已上传至公司云服务器，请使用自己的股东权限登录下载</div>
+					<div class="time">昨天</div>
+					<div class="num">2</div>
+					<i class="checkbox fa fa-square-o"></i>
+					<div class="functions">
+						<i class="fa fa-star-o"></i>
+						<i class="icon icon-evernote"></i>
+						<i class="fa fa-dropbox"></i>
+						<i class="fa fa-trash-o"></i>
+					</div>
+				</li>
+				<li class="">
+					<div class="author">
+						<i class="fa fa-star"></i>
+						关一帆(efan@lmail.com)
+					</div>
+					<div class="title">我将随万有引力号启程追赶蓝色空间号</div>
+					<div class="content">明天开始不在担任星环公司任何职位，感谢各位朋友一直以来的陪伴</div>
+					<div class="time">前天</div>
+					<div class="num">6</div>
+					<i class="checkbox fa fa-square-o"></i>
+					<div class="functions">
+						<i class="fa fa-star-o"></i>
+						<i class="icon icon-evernote"></i>
+						<i class="fa fa-dropbox"></i>
+						<i class="fa fa-trash-o"></i>
+					</div>
+				</li>
+				<li class="">
+					<div class="author">
+						<i class="fa fa-star"></i>
+						白ICE(ice.b@lmail.com)
+					</div>
+					<div class="title">已将1号曲率发动引擎装配至星环一号</div>
+					<div class="content">各位收到通知后立刻删除邮件，消息切勿外传</div>
+					<div class="time">前天</div>
+					<div class="num">6</div>
+					<i class="checkbox fa fa-square-o"></i>
+					<div class="functions">
+						<i class="fa fa-star-o"></i>
+						<i class="icon icon-evernote"></i>
+						<i class="fa fa-dropbox"></i>
+						<i class="fa fa-trash-o"></i>
+					</div>
+				</li>
+
+			</ul>
+			<div class="create switchPageTo" data-animation="56" data-href="create-mail">
+				<i class="fa fa-pencil"></i>
+			</div>
+
+		</div>
+	</section>
+	<section class="settings">
+		<header>
+			<div class="status-bar black"></div>
+
+		</header>
+		<div class="content-view">
+			<div class="top">设置<i class="close fa fa-times switchPageTo" data-animation="4" data-href="index"></i></div>
+			<ul>
+				<li><i class="fa fa-volume-down"></i>声音效果 <i class="switch off"></i></li>
+				<li><i class="fa fa-bell-o"></i>推送开关 <i class="switch on"></i></li>
+				<li><i class="fa fa-smile-o"></i>签名设置<i class="fa fa-angle-right"></i></li>
+				<li><i class="fa fa-dropbox"></i>Dropbox后删除邮件 <i class="switch off"></i></li>
+				<li><i class="icon icon-evernote"></i>Evernote后删除邮件 <i class="switch off"></i></li>
+				<li></li>
+				<li>关注L'Mail <i class="fa fa-weibo"></i></li>
+				<li>去App Store评价L'Mail <i class="fa fa-apple"></i></li>
+			</ul>
+			<div class="endmark">
+				<img src="images/logo.png" alt=""><br>
+				By Buaa-L'Mail Team<br>
+				version 1.0beta
+			</div>
+		</div>
+	</section>
+	<section class="dropbox-auth switchPageTo" data-animation="2" data-href="index">
+		<img src="images/dropbox.jpg" alt="">
+	</section>
+	<section class="evernote-auth switchPageTo" data-animation="2" data-href="index">
+		<img src="images/evernote.jpg" alt="">
+	</section>
+	<section class="create-mail">
+		<header>
+			<div class="status-bar black"></div>
+
+		</header>
+		<div class="content-view">
+			<div class="top"></div>
+		</div>
+	</section>
+</div>
+<div class="backdrop"></div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/pagetransitions.js"></script>
+<!-- <script src="js/dragEvent.js"></script> -->
+<!--<script src="js/ua.js"></script>
+-->
+<script>
+	$(document).ready(function () {
+
+
+		
+		$("body").css('cursor','-webkit-grab');
+		$(document).on('mousedown',function(){
+			$("body").css('cursor','-webkit-grabbing');
+		});
+		$(document).on('mouseup',function(){
+			$("body").css('cursor','-webkit-grab');
+		});
+
+		$('.dropdown').on('show.bs.dropdown', function () {
+			$('.backdrop').addClass('in');
+		});
+		$('.dropdown').on('hide.bs.dropdown', function () {
+			$('.backdrop').removeClass('in');
+		});
+		$('.mail-list li').on('swipeleft',function(){
+			if($(this).hasClass('move')){
+				return false;
+			}else{
+				if($(this).hasClass('blur')){
+					$('.mail-list li').removeClass('blur');
+				}else{
+					$('.mail-list li').removeClass('blur');
+					$(this).addClass('blur');
+				}
+			}
+		});
+		$('.mail-list li').on('swiperight',function(){
+			if($(this).hasClass('blur')){
+				$('.mail-list li').removeClass('blur');
+			}else{
+				$('.fa-bars').click();
+			}
+			
+		});
+		$('.sidebar').on('swipeleft',function(){
+			$('.fa-bars').click();
+		});
+
+			// $('.mail-list li').on('dblclick',function(){
+			// 	if($(this).hasClass('move')){
+			// 		return false;
+			// 	}else{
+			// 		if($(this).hasClass('blur')){
+			// 			$('.mail-list li').removeClass('blur');
+			// 		}else{
+			// 			$('.mail-list li').removeClass('blur');
+			// 			$(this).addClass('blur');
+			// 		}
+			// 	}
+				
+				
+			// });
+
+		$('.account li').on('click',function(){
+			$('.fa-bars').click();
+		});
+		$('.fa-bars').on('click',function(){
+			if($('.mail-list').hasClass('move')){
+				$('.mail-list').removeClass('move');
+
+				$('.top').removeClass('move');
+				$('.top2').removeClass('move');
+				$('.sidebar').removeClass('move');
+				$('.create').removeClass('hide');
+			}else{
+				$('.mail-list').addClass('move');
+				$('.top').addClass('move');
+				$('.top2').addClass('move');
+				$('.sidebar').addClass('move');
+				if($('.mail-list li').hasClass('move')){
+					$('.top .edit').click();
+				}
+				$('.create').addClass('hide');
+			}
+		});
+		$('.functions .fa-star-o').on('click',function(){
+			if($(this).hasClass('fa-star')){
+				$(this).removeClass('fa-star');
+				$(this).parents('li').removeClass('star').removeClass('blur');
+			}else{
+				$(this).addClass('fa-star');
+				$(this).parents('li').addClass('star').removeClass('blur');
+			}
+		});
+		$('.top .edit').on('click',function(){
+			if($('.mail-list li').hasClass('move')){
+				$(this).text('编辑');
+				$('.mail-list li').removeClass('move').removeClass('blur');
+				$('.index .content-view .bottom').removeClass('move');
+				$('.create').removeClass('move');
+				$('.mail-list li').removeClass('checked');
+				$('.mail-list li .checkbox').addClass('fa-square-o"').removeClass('fa-check-square');
+			}else{
+				$('.mail-list li').addClass('move').removeClass('blur');
+				$(this).text('取消');
+				$('.index .content-view .bottom').addClass('move');
+				$('.create').addClass('move');
+			}
+			
+		});
+		$('.mail-list li .checkbox').on('click',function(){
+			if($(this).hasClass('fa-check-square')){
+				$(this).removeClass('fa-check-square');
+				$(this).parents('li').removeClass('checked');
+			}else{
+				$(this).addClass('fa-check-square');
+				$(this).parents('li').addClass('checked');
+			}
+		});
+		$('.index .content-view .bottom li:first-child').on('click',function(){
+			if($(this).hasClass('glyphicon-remove')){
+				$(this).text('全选').removeClass('glyphicon-remove').addClass('glyphicon glyphicon-check');
+				$('.mail-list li').removeClass('checked');
+				$('.mail-list li .checkbox').addClass('fa-square-o"').removeClass('fa-check-square');
+
+			}else{
+				$(this).text('不选').addClass('glyphicon glyphicon-remove').removeClass('glyphicon-check');
+				$('.mail-list li').addClass('checked');
+				$('.mail-list li .checkbox').removeClass('fa-square-o"').addClass('fa-check-square');
+			}
+			
+		});
+		$('.switch').on('click',function(){
+			if($(this).hasClass('on')){
+				$(this).removeClass('on').addClass('off');
+			}else{
+				$(this).removeClass('off').addClass('on');	
+			}
+		});
+		$('.settings li:last-child').prev().addClass('last');
+		function addListEffect(){
+			animEndEventNames = {
+				'WebkitAnimation' : 'webkitAnimationEnd',
+				'OAnimation' : 'oAnimationEnd',
+				'msAnimation' : 'MSAnimationEnd',
+				'animation' : 'animationend'
+			},
+			// animation end event name
+			animEndEventName = animEndEventNames[ Modernizr.prefixed('animation') ],
+			// support css animations
+			support = Modernizr.cssanimations;
+			var n = $('.mail-list li').length;
+			$('.mail-list li').addClass('moveFromRight');
+			for (var i=0; i<=n; i++)
+			  {
+			  	$('.mail-list li:nth-child('+i+')').addClass('delay'+i);
+			  }
+			$('.mail-list li').on(animEndEventName,function(){
+				$('.mail-list li').removeClass('moveFromRight');
+			});
+		}
+		addListEffect();
+
+	})
+	</script>
+</body>
+</html>
+<!-- 
+重点：
+下拉刷新
+拖拽附件
+同一个按钮，在不同场景下又不同的目的地
+-->

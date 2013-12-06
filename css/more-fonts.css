@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "more";
+  src:url("../fonts/more.eot");
+  src:url("../fonts/more.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/more.woff") format("woff"),
+    url("../fonts/more.ttf") format("truetype"),
+    url("../fonts/more.svg#more") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "more" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "more" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-evernote:before {
+  content: "\e0fa";
+}
