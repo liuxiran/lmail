@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
 	<title>L'Mail-Demo</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css" />
@@ -12,7 +14,7 @@
 	</div>
 	<div class="pages">
 
-		<!-- <section class="home">
+	<!-- 	<section class="home">
 		<header>
 			<div class="status-bar white"></div>
 		</header>
@@ -21,7 +23,9 @@
 			<span class="label">L'Mail</span>
 		</div>
 	</section>
-	<section class="launch-image switchPageTo" data-animation="21" data-href="index">启动画面</section>
+	<section class="launch-image switchPageTo" data-animation="21" data-href="index">
+	<div class="tc">Find Nice,Find Less</div>
+	</section>
 	 <section class="welcome1 switchPageTo" data-animation="1" data-href="welcome2">
 		教程动画1
 		<ul class="dots">
@@ -57,18 +61,18 @@
 			<li></li>
 			<li class="active"></li>
 		</ul>
-	</section> -->
-	
+	</section>
+	 -->
 	<section class="index">
 		<header>
 			<div class="status-bar black"></div>
 
 		</header>
 		<div class="content-view">
-			<div class="top"> <i class="fa fa-bars"></i>
-				<span class="edit">编辑</span>
+			<div class="top"> <i class="fa fa-bars moveFromLeftFade delay700"></i>
+				<span class="edit moveFromRightFade delay700">编辑</span>
 				<div class="dropdown">
-					<a data-toggle="dropdown" href="#">
+					<a data-toggle="dropdown" href="#" class="moveFromTopFade delay700">
 						收件箱（ <b>3</b>
 						） <i class="fa fa-angle-down"></i>
 					</a>
@@ -228,7 +232,7 @@
 				</li>
 
 			</ul>
-			<div class="create switchPageTo" data-animation="56" data-href="create-mail">
+			<div class="create switchPageTo" data-animation="68" data-href="create-mail">
 				<i class="fa fa-pencil"></i>
 			</div>
 
@@ -271,6 +275,7 @@
 		</header>
 		<div class="content-view">
 			<div class="top"></div>
+			<span class="switchPageTo" data-href="index" data-animation="69">back</span>
 		</div>
 	</section>
 </div>
@@ -284,6 +289,19 @@
 <!--<script src="js/ua.js"></script>
 -->
 <script>
+	$(document).ready(function() { 
+	  if (navigator.userAgent.match(/Android/i)) { 
+	    window.scrollTo(0,0); // reset in case prev not scrolled   
+	    var nPageH = $(document).height(); 
+	    var nViewH = window.outerHeight; 
+	    if (nViewH > nPageH) { 
+	      nViewH -= 250; 
+	      $('BODY').css('height',nViewH + 'px'); 
+	    } 
+	    window.scrollTo(0,1); 
+	  } 
+
+	});
 	$(document).ready(function () {
 
 
@@ -294,6 +312,25 @@
 		});
 		$(document).on('mouseup',function(){
 			$("body").css('cursor','-webkit-grab');
+		});
+		var n = $('.mail-list li').length;
+		for (var i=0; i<=n; i++)
+		{
+			$('.mail-list li:nth-child('+i+')').addClass('delay'+i);
+		}
+		function addListEffect(){
+			
+			$('.mail-list li').addClass('scaleUp');
+
+
+		}
+		addListEffect();
+
+
+
+
+		$('.switchPageTo').on('click',function(){
+			$('.mail-list li').removeClass('blur');
 		});
 
 		$('.dropdown').on('show.bs.dropdown', function () {
@@ -361,6 +398,7 @@
 					$('.top .edit').click();
 				}
 				$('.create').addClass('hide');
+				$('.sidebar li').addClass('moveFromLeftFade');
 			}
 		});
 		$('.functions .fa-star-o').on('click',function(){
@@ -418,28 +456,7 @@
 			}
 		});
 		$('.settings li:last-child').prev().addClass('last');
-		function addListEffect(){
-			animEndEventNames = {
-				'WebkitAnimation' : 'webkitAnimationEnd',
-				'OAnimation' : 'oAnimationEnd',
-				'msAnimation' : 'MSAnimationEnd',
-				'animation' : 'animationend'
-			},
-			// animation end event name
-			animEndEventName = animEndEventNames[ Modernizr.prefixed('animation') ],
-			// support css animations
-			support = Modernizr.cssanimations;
-			var n = $('.mail-list li').length;
-			$('.mail-list li').addClass('moveFromRight');
-			for (var i=0; i<=n; i++)
-			  {
-			  	$('.mail-list li:nth-child('+i+')').addClass('delay'+i);
-			  }
-			$('.mail-list li').on(animEndEventName,function(){
-				$('.mail-list li').removeClass('moveFromRight');
-			});
-		}
-		addListEffect();
+		
 
 	})
 	</script>

@@ -183,9 +183,15 @@ section{
 .launch-image{
 	background: @red;
 	text-align: center;
-	line-height: 1136px;
 	color:#fff;
-	font-size: 34pt;
+
+	font-size: 22pt;
+	.tc{
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		bottom:30px;
+	}
 }
 .home-button{
 	width: 136px;
@@ -685,8 +691,6 @@ h5.title{
 	}
 }
 
-
-
 .scaleSmall{
 	.scale(0.9);
 }
@@ -729,9 +733,12 @@ h5.title{
 // 		background-position: -141px -256px;
 // 	}
 // }
-@media (max-width:640x){
+@media screen and (max-width:640px){
 	body{
 		width: 640px;
 		height: 1136px;
+	}
+	.iphone,.pages{
+		left:auto;
 	}
 }

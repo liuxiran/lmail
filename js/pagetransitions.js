@@ -324,6 +324,14 @@ var PageTransitions = (function() {
 				outClass = 'rotateSlideOut';
 				inClass = 'rotateSlideIn';
 				break;
+			case 68:
+				outClass = 'moveToLeft scaleDown';
+				inClass = 'moveFromRight';
+				break;
+			case 69:
+				outClass = 'moveToRight scaleDown';
+				inClass = 'moveFromLeft';
+				break;
 
 		}
 
