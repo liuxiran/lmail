@@ -13,8 +13,8 @@
 		<span class="home-button switchPageTo" data-animation="21" data-href="home"></span>
 	</div>
 	<div class="pages">
-
-	<!-- 	<section class="home">
+	<div class="top-msg">正在刷新<i class="fa fa-spinner fa-spin"></i></div>
+	<section class="home">
 		<header>
 			<div class="status-bar white"></div>
 		</header>
@@ -62,7 +62,7 @@
 			<li class="active"></li>
 		</ul>
 	</section>
-	 -->
+	 
 	<section class="index">
 		<header>
 			<div class="status-bar black"></div>
@@ -71,7 +71,7 @@
 		<div class="content-view">
 			<div class="top"> <i class="fa fa-bars moveFromLeftFade delay700"></i>
 				<span class="edit moveFromRightFade delay700">编辑</span>
-				<div class="dropdown">
+				<div class="dropdown index-dropdown">
 					<a data-toggle="dropdown" href="#" class="moveFromTopFade delay700">
 						收件箱（ <b>3</b>
 						） <i class="fa fa-angle-down"></i>
@@ -104,14 +104,19 @@
 					</ul>
 				</div>
 			</div>
-			<div class="top2"></div>
+			<div class="top2">
+				<div class="dropdown account-select">
+					<a data-toggle="dropdown" class="toggle" href="#" class="moveFromTopFade delay700">
+						当前邮箱：tm@lmail.com <i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li>tm@lmail.com</li>
+						<li>t@leafiy.com</li>
+						<li><i class="fa fa-plus-square-o"></i>添加邮箱</li>
+					</ul>
+				</div>
+			</div>
 			<div class="sidebar">
-				<h5 class="title">账号</h5>
-				<ul class="account">
-					<li>tm@lmail.com</li>
-					<li>t@leafiy.com</li>
-					<li><i class="fa fa-plus-square-o"></i>添加邮箱</li>
-				</ul>
 				<h5 class="title">功能列表</h5>
 				<ul>
 					<li><i class="fa fa-paperclip"></i>全局附件管理<i class="fa fa-angle-right"></i></li>
@@ -129,12 +134,12 @@
 				<ul>
 					<li><i class="glyphicon glyphicon-check"></i>全选</li>
 					<li><i class="glyphicon glyphicon-share"></i>移动</li>
-					<li><i class="fa fa-trash-o"></i>删除</li>
+					<li><i class="fa fa-trash-o trash"></i>删除</li>
 				</ul>
 				
 			</div>
 			<ul class="mail-list">
-				<li class="unread many">
+				<li class=" many">
 					<div class="author"><i class="fa fa-star"></i>T.Vedder(t.vedder@lmail.com)</div>
 					<div class="title">会议安排</div>
 					<div class="content">所有基础理论研究人员下午三点到三号曲率研究中心开会</div>
@@ -145,7 +150,7 @@
 						<i class="fa fa-star-o"></i>
 						<i class="icon icon-evernote"></i>
 						<i class="fa fa-dropbox"></i>
-						<i class="fa fa-trash-o"></i>
+						<i class="fa fa-trash-o trash"></i>
 					</div>
 				</li>
 				<li class="unread">
@@ -159,7 +164,7 @@
 						<i class="fa fa-star-o"></i>
 						<i class="icon icon-evernote"></i>
 						<i class="fa fa-dropbox"></i>
-						<i class="fa fa-trash-o"></i>
+						<i class="fa fa-trash-o trash"></i>
 					</div>
 				</li>
 				<li class="many star">
@@ -176,7 +181,7 @@
 						<i class="fa fa-star-o"></i>
 						<i class="icon icon-evernote"></i>
 						<i class="fa fa-dropbox"></i>
-						<i class="fa fa-trash-o"></i>
+						<i class="fa fa-trash-o trash"></i>
 					</div>
 				</li>
 				<li class="unread slide-example">
@@ -193,10 +198,10 @@
 						<i class="fa fa-star-o"></i>
 						<i class="icon icon-evernote"></i>
 						<i class="fa fa-dropbox"></i>
-						<i class="fa fa-trash-o"></i>
+						<i class="fa fa-trash-o trash"></i>
 					</div>
 				</li>
-				<li class="">
+				<li class="unread">
 					<div class="author">
 						<i class="fa fa-star"></i>
 						关一帆(efan@lmail.com)
@@ -210,7 +215,7 @@
 						<i class="fa fa-star-o"></i>
 						<i class="icon icon-evernote"></i>
 						<i class="fa fa-dropbox"></i>
-						<i class="fa fa-trash-o"></i>
+						<i class="fa fa-trash-o trash"></i>
 					</div>
 				</li>
 				<li class="">
@@ -227,7 +232,7 @@
 						<i class="fa fa-star-o"></i>
 						<i class="icon icon-evernote"></i>
 						<i class="fa fa-dropbox"></i>
-						<i class="fa fa-trash-o"></i>
+						<i class="fa fa-trash-o trash"></i>
 					</div>
 				</li>
 
@@ -269,13 +274,32 @@
 		<img src="images/evernote.jpg" alt="">
 	</section>
 	<section class="create-mail">
+		<div class="backdrop1"></div>
 		<header>
 			<div class="status-bar black"></div>
 
 		</header>
 		<div class="content-view">
-			<div class="top"></div>
-			<span class="switchPageTo" data-href="index" data-animation="69">back</span>
+			<div class="top">
+							<span class="switchPageTo back" data-href="index" data-animation="69"><i class="fa fa-angle-left"></i>返回</span>
+							<span class="switchPageTo send"><i class="glyphicon glyphicon-send"></i>发送</span>
+
+			</div>
+			<div class="bottom">
+			<ul>
+				<li><i class="fa fa-paperclip"></i></li>
+				<li><i class="fa fa-picture-o"></i>
+					<div class="system-menu">
+						<div><i class="fa fa-camera"></i>拍摄新照片 </div>
+						<div><i class="fa fa-picture-o"></i>从图片库中选择</div>
+						<div>取消</div>
+					</div>
+				</li>
+				<li><i class="fa fa-dropbox"></i></li>
+				<li><i class="fa fa-keyboard-o"></i></li>
+				</ul>
+				
+			</div>
 		</div>
 	</section>
 </div>
@@ -326,17 +350,26 @@
 		}
 		addListEffect();
 
-
-
+		$('.trash').on('click',function(){
+			$('.top-msg').text('邮件已删除');
+			showMsg();
+			$(this).parents('li').addClass('del');
+		});
+		function showMsg(){
+			$('.top-msg').addClass('move');
+			setTimeout(function(){
+				$('.top-msg').removeClass('move');
+			},2000)
+		}
 
 		$('.switchPageTo').on('click',function(){
 			$('.mail-list li').removeClass('blur');
 		});
 
-		$('.dropdown').on('show.bs.dropdown', function () {
+		$('.dropdown.index-dropdown').on('show.bs.dropdown', function () {
 			$('.backdrop').addClass('in');
 		});
-		$('.dropdown').on('hide.bs.dropdown', function () {
+		$('.dropdown.index-dropdown').on('hide.bs.dropdown', function () {
 			$('.backdrop').removeClass('in');
 		});
 		$('.mail-list li').on('swipeleft',function(){

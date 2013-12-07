@@ -3,10 +3,11 @@
 // @red-dark:darken(@red, 10%);
 @line:#c7c7c7;
 @gray:#ccc;
-@blue:#2087fc;
+@blue:#157dfb;
 @gray-light:#f8f8f8;
 @black:#000;
 @green:#53d769;
+
 @import "common.less";
 @import "glyphicons.css";
 @import "font-awesome.min.css";
@@ -131,6 +132,18 @@ section{
   	height: 0;    
   	overflow: hidden;
 }
+.backdrop1{
+	width:640px;
+	height: 1136px;
+	margin-left: -318px;
+	left: 50%;
+	//top: 220px;
+	z-index: 200;
+	position: absolute;
+	background: #000;
+	.opacity(30);
+	.translate3D()
+}
 .status-bar{
 	width: 640px;
 	height: 27px;
@@ -141,7 +154,21 @@ section{
 		background: url(../images/status-bar-black.png) no-repeat;
 	}
 }
-	
+.top-msg{
+	width: 640px;
+	height: 36px;
+	position: absolute;
+	.translateY(-36px);
+	left:0;
+	text-align: center;
+	z-index: 1100;
+	font-size: 18pt;
+	background: @gray;
+	.transition();
+	&.move{
+		.translateY(0);
+	}
+}
 .lmail-icon{
 	width: 120px;
 	height: 120px;
@@ -431,6 +458,36 @@ h5.title{
 			.transition();
 		}
 	}
+	&.account-select{
+		a.toggle{
+			font-size: 24pt;
+			color:#333;
+			line-height: 88px;
+		}
+	}
+	.dropdown-menu{
+		width: 540px;
+		left: -30px;
+		height: 1008px;
+		margin:0;
+		top:93px;
+		.border-radius(0);
+		background: lighten(@gray, 10%);
+		padding:0;
+		li{
+			height: 88px;
+			line-height: 88px;
+			font-size: 24pt;
+			padding:0 30px;
+			border-bottom: 1px solid @line;
+			&:hover{
+				background: #fff;
+			}
+			.fa-plus-square-o{
+				color:@red;
+			}
+		}
+	}
 }
 .dropdown-menu{
 	width: 640px;
@@ -469,30 +526,32 @@ h5.title{
 	height: 1008px;
 	.functions{
 		z-index: 100;
-		position: absolute;
-		background: rgba(255,255,255,0.7);
 		top:0;
-		.translateX(100%);
+		position: absolute;
+		background: @red;
+		color:#fff;
+		.translateX(120%);
 		.transition();
 		height: 100%;
 		width: 100%;
 		font-size: 44pt;
 		i{
-			color:@red;
 			position: absolute;
 			top:60px;
 			&:nth-child(1){
-				left:40px;
+				left:60px;
 			}
 			&:nth-child(2){
 				top:55px;
 				left:190px;
+				display: none;
 			}
 			&:nth-child(3){
 				left:340px;
+				display: none;
 			}
 			&:nth-child(4){
-				left:490px;
+				left:220px;
 			}
 
 		}
@@ -504,6 +563,7 @@ h5.title{
 		height:174px;
 		border-bottom: 1px solid @line;
 		z-index: 10;
+		overflow: hidden;
 		.transition();
 		.checkbox{
 			font-size: 32pt;
@@ -516,6 +576,11 @@ h5.title{
 		&.checked{
 			background: lighten(#ccc, 10%);
 
+		}
+		&.del{
+			height: 0;
+			padding:0;
+			border:none;
 		}
 		&.move{
 			.translateX(0);
@@ -530,11 +595,14 @@ h5.title{
 			.transition();
 		}
 		&.blur{
-			.functions{
-				.translateX(0);
+			.author,.title,.content,.num,.time{
+				//.translateX(-280px);
+				.opacity(70);
 			}
-			.author,.content,.title{
-				.blur(4px);
+			
+			.functions{
+				.translateX(290px);
+				.drop-shadow(-8px 0 10px #ccc);
 			}
 		}
 		&.star{
@@ -688,9 +756,75 @@ h5.title{
 .create-mail{
 	header{
 		background: #f8f8f8;
+		z-index: 100;
+	}
+	.top{
+		span{
+			color: @red;
+			font-size: 30pt;
+			&.send{
+				float: right;
+				margin-top: 5px;
+			}
+		}
+		line-height: 88px;
+	}
+	.bottom{
+		z-index: 200;
+		li{
+			margin: 0 25px;
+			&:last-child{
+				i{
+					color:@gray;
+				}
+			}
+		}
+		i{
+			font-size: 32pt;
+		}
+		.system-menu{
+			position: absolute;
+		}
 	}
 }
-
+i{
+	margin:0 5px;
+}
+.system-menu{
+	width: 100%;
+	padding:0 30px;
+	left:0;
+	bottom: 90px;
+	text-align: center;
+	z-index: 20000;
+	position: absolute;
+	div{
+		background: #fff;
+		margin-bottom: 20px;
+		&:first-child{
+			margin-bottom: 0;
+			.border-top-left-radius(10px);
+			.border-top-right-radius(10px);
+			border-bottom: 1px solid @line;
+			color:@blue;
+			i{
+				color: #333;
+			}
+		}
+		&:nth-child(2){
+			.border-bottom-left-radius(10px);
+			.border-bottom-right-radius(10px);
+			color:@blue;
+			i{
+				color: #333;
+			}
+		}
+		&:last-child{
+			.border-radius(10px);
+			color:@red;
+		}
+	}
+}
 .scaleSmall{
 	.scale(0.9);
 }
